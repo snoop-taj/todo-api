@@ -1,0 +1,10 @@
+parameters:
+    kernel.secret: "%env(APP_KEY)%"
+
+    database_host: "%env(DB_HOST)%"
+    database_port: "%env(DB_PORT)%"
+    database_name: "%env(DB_DATABASE)%"
+    database_user: "%env(DB_USERNAME)%"
+    database_pass: "%env(DB_PASSWORD)%"
+
+    remote_url: "%env(REMOTE_URL)%"

@@ -1,0 +1,46 @@
+{
+    "name": "etechnologia/et-ms-to-do-list",
+    "description": "Todo List",
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "symfony/symfony": "3.2",
+        "symfony/dependency-injection": "3.2",
+        "symfony/config": "3.2",
+        "symfony/monolog-bundle": "^3.1",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "guzzlehttp/guzzle": "^6.2",
+        "eightpoints/guzzle-bundle": "^5.3",
+        "ramsey/uuid": "^3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1",
+        "behat/behat": "3.*",
+        "behat/symfony2-extension" : "^2.1",
+        "squizlabs/php_codesniffer": "^2.8",
+        "nelmio/api-doc-bundle": "^2.13",
+        "zalas/behat-no-extension": "^1.1",
+        "pwm/deepend": "^1.1",
+        "pwm/sfw-router": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Etechnologia\\Platform\\Todo\\": [
+                "app/",
+                "src/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Etechnologia\\Platform\\Todo\\": [
+                "tests/integration/",
+                "tests/unit/"
+            ]
+        }
+    },
+    "config": {
+        "secure-http": false
+    }
+}

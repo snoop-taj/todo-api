@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+use Etechnologia\Platform\Todo\AppKernel;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Debug\Debug;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$env = getenv('APP_ENV');
+if (! AppKernel::isValidEnv($env)) {
+    die(sprintf('APP_ENV is not set or not valid! Valid envs are: %s.', implode(', ', AppKernel::ENVS)));
+}
+
+set_time_limit(0);
+
+$input = new ArgvInput();
+$debug = (bool)(
+    getenv('APP_DEBUG') !== '0'
+    && !$input->hasParameterOption(['--no-debug', ''])
+    && $env !== AppKernel::ENV_PRODUCTION
+);
+
+if ($debug) {
+    Debug::enable();
+}
+
+(new Application(new AppKernel($env, $debug)))->run($input);

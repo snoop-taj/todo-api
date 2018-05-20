@@ -1,0 +1,29 @@
+api_v1_todo_create:
+    path: /todo
+    methods: [POST]
+    defaults:
+        _controller: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController::create
+
+api_v1_todo_update:
+    path: /todo/{id}
+    methods: [PUT]
+    defaults:
+        _controller: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController::update
+
+api_v1_todo_list:
+    path: /todo/list
+    methods: [GET]
+    defaults:
+        _controller: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController::list
+
+api_v1_todo_delete:
+    path: /todo/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController::delete
+
+api_v1_todo_get_by_id:
+    path: /todo/{id}
+    methods: [GET]
+    defaults:
+        _controller: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController::getById

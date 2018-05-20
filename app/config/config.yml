@@ -1,0 +1,12 @@
+imports:
+    - { resource: api/nelmio.yml }
+    - { resource: db/doctrine.yml }
+    - { resource: guzzle/client.yml }
+    - { resource: parameters/parameters.yml }
+
+framework:
+    router:
+        resource: '%kernel.root_dir%/config/routing/routing.yml'
+        strict_requirements: ~
+    templating:
+        engines: ['twig']

@@ -1,0 +1,28 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:   pdo_mysql
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_pass%"
+                charset:  UTF8
+        types:
+            datetime_immutable: Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\Types\DateTimeImmutableType
+    orm:
+        default_entity_manager: default
+        auto_generate_proxy_classes: "%kernel.debug%"
+        entity_managers:
+            default:
+                auto_mapping: false
+                connection: default
+                mappings:
+                    default:
+                        mapping:    true
+                        type:       xml
+                        dir:        "%kernel.root_dir%/../src/Infrastructure/Database/Doctrine/Mappings/Todo"
+                        prefix:     Etechnologia\Platform\Todo\Core
+                        is_bundle:  false

@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        synthetic: true
+
+    Etechnologia\Platform\Todo\Core\Todo\TodoService:
+        class: Etechnologia\Platform\Todo\Core\Todo\TodoService
+        autowire: true
+
+    Etechnologia\Platform\Todo\Core\Todo\TodoRepositoryInterface: '@Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\TodoRepository'
+

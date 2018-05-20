@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+        abstract: true
+
+    exception.listener:
+        class: Etechnologia\Platform\Todo\ApiBundle\EventListener\ExceptionListener
+        arguments:
+            - "@logger"
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController:
+        class: Etechnologia\Platform\Todo\ApiBundle\Controller\TodoController
+        autowire: true

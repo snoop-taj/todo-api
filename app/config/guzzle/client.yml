@@ -1,0 +1,4 @@
+guzzle:
+    clients:
+        remote_api:
+            base_url: "%remote_api_url%"
