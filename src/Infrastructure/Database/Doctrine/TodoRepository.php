@@ -3,14 +3,12 @@ declare(strict_types=1);
 
 namespace Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine;
 
-use Doctrine\Bundle\DoctrineBundle\Command\Proxy\DoctrineCommandHelper;
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Etechnologia\Platform\Todo\Core\Todo\Todo;
 use Etechnologia\Platform\Todo\Core\Todo\TodoCollection;
 use Etechnologia\Platform\Todo\Core\Todo\TodoRepositoryInterface;
-use Symfony\Component\Cache\Adapter\DoctrineAdapter;
 
 class TodoRepository implements TodoRepositoryInterface
 {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\Types;
+namespace Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\Type;
 
 use DateTimeImmutable;
 use DateTimeInterface;

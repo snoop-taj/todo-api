@@ -11,7 +11,7 @@ doctrine:
                 password: "%database_pass%"
                 charset:  UTF8
         types:
-            datetime_immutable: Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\Types\DateTimeImmutableType
+            datetime_immutable: Etechnologia\Platform\Todo\Infrastructure\Database\Doctrine\Type\DateTimeImmutableType
     orm:
         default_entity_manager: default
         auto_generate_proxy_classes: "%kernel.debug%"

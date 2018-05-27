@@ -1,0 +1,34 @@
+imports:
+    - { resource: parameters.yml }
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        abstract: true
+
+    Etechnologia\Platform\Todo\Behat\ArgumentResolver:
+        class: Etechnologia\Platform\Todo\Behat\ArgumentResolver
+        arguments:
+            - "@service_container"
+            - "%context_services%"
+        tags:
+            - { name: context.argument_resolver }
+
+    Etechnologia\Platform\Todo\Behat\RestClient:
+        class: Etechnologia\Platform\Todo\Behat\RestClient
+        arguments:
+            - "@guzzle"
+
+    Etechnologia\Platform\Todo\Behat\TodoApiClient:
+        class: Etechnologia\Platform\Todo\Behat\TodoApiClient
+        autowire: true
+
+    Etechnologia\Platform\Todo\Behat\DBHandler:
+        class: Etechnologia\Platform\Todo\Behat\DBHandler
+
+    guzzle:
+        class: GuzzleHttp\Client
+        arguments:
+            - base_uri: '%todo.base_uri%'

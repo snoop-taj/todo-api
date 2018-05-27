@@ -1,0 +1,24 @@
+default:
+    autoload:
+        '': "%paths.base%/tests/functional/bootstrap"
+    gherkin:
+        filters:
+            tags: "~@disabled"
+
+    suites:
+        api:
+            paths: [ "%paths.base%/tests/functional/features" ]
+            contexts:
+                - Etechnologia\Platform\Todo\Behat\BaseContext: ~
+
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                env: test
+                debug: true
+                path: app/AppKernel.php
+                class:  Etechnologia\Platform\Todo\AppKernel
+                bootstrap: vendor/autoload.php
+        Zalas\Behat\NoExtension:
+            imports:
+                - tests/functional/config/services.yml

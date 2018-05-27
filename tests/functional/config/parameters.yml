@@ -1,0 +1,5 @@
+parameters:
+    todo.base_uri: "http://todo-test.local/"
+    context_services:
+        Etechnologia\Platform\Todo\Behat\TodoApiClient: 'Etechnologia\Platform\Todo\Behat\TodoApiClient'
+        Etechnologia\Platform\Todo\Behat\DBHandler: 'Etechnologia\Platform\Todo\Behat\DBHandler'

@@ -37,6 +37,10 @@
             "Etechnologia\\Platform\\Todo\\": [
                 "tests/integration/",
                 "tests/unit/"
+            ],
+            "Etechnologia\\Platform\\Todo\\Behat\\": [
+                "tests/functional/bootstrap",
+                "tests/functional/contexts"
             ]
         }
     },
